@@ -4,115 +4,36 @@
 		<meta charset="UTF-8">
 		<title>标签节点</title>
 		
-		<link rel="stylesheet" href="../plugins/mdui/css/mdui.min.css" />
+		<meta name="keywords" content="极客屋,极客,geek,geekhome,开源,博客,问与答,专题,标签"/>
+		<meta name="description" content="极客屋是极客们的社区。在这里大家能够多多分享自己正在做的有趣事物、最近的学习、交流想法，在这里找到朋友认识更多有趣的人。"/>
+		<meta name="robots" content="all" />
+		
+		<link rel="stylesheet" href="../plugins/mdui/css/mdui.min.css">
+		<link rel="stylesheet" href="../plugins/layui/css/layui.css">
+		<link rel="stylesheet" href="../plugins/Hui-iconfont/1.0.8/iconfont.css"  />
 		<link rel="stylesheet" href="../css/common.css" />
 		<link rel="stylesheet" href="../css/lableNode.css" />
 		
 	</head>
-	<body>
-		<div class="mdui-container" style="padding: 0px; height: 2100px;">
-			<div class="mdui-card small_card">
-	  			<div class="crad_title">标签节点</div>
-	  			<div class="mdui-tab" mdui-tab>
-				 	<a href="#lable" class="mdui-ripple">标签</a>
-				  	<a href="#node" class="mdui-ripple">节点</a>
-				</div>
-				<div id="lable" class="mdui-m-t-1">
-					<div class="crad_title mdui-m-t-2">JAVA</div>
-					<div>
-						<ul class="mdui-m-t-2">
-							<li>IO</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-						</ul>
-					</div>
-					<div class="mdui-clearfix"></div>
-					<div class="crad_title mdui-m-t-5">Spring</div>
-					<div>
-						<ul class="mdui-m-t-1">
-							<li>IO</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-						</ul>
-					</div>
-				</div>
-				<div id="node" class="mdui-m-t-1">
-					<div class="crad_title mdui-m-t-2">JAVA</div>
-					<div>
-						<ul class="mdui-m-t-2">
-							<li>IO</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-						</ul>
-					</div>
-					<div class="mdui-clearfix"></div>
-					<div class="crad_title mdui-m-t-5">Spring</div>
-					<div>
-						<ul class="mdui-m-t-1">
-							<li>IO</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-							<li>多线程</li>
-						</ul>
-					</div>
-				</div>
-	  		</div>		
-		</div>
+	<body id="lablePage">
+		<div class="mdui-card small_card">
+	  		<div class="crad_title">『标签节点』</div>
+				<div id="lable" class="mdui-m-t-1"></div>
+	  	</div>		
 	</body>
 	
 	<script type="text/javascript" src="../js/jquery.min.js" ></script>
-	<script type="text/javascript" src="../plugins/mdui/js/mdui.min.js" ></script>
+	<script type="text/javascript" src="../plugins/mdui/js/mdui.min.js"></script>
+	<script type="text/javascript" src="../plugins/layui/layui.js"></script>
+	<script type="text/javascript" src="../js/commonConfig.js" ></script>
+	<script type="text/javascript" src="../js/labelConfig.js" ></script>
 	
 	<script type="application/javascript">
 		
 		$(function(){
-			
+			new labelConfig();
 		});
 		
 	</script>
+
 </html>

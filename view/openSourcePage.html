@@ -4,32 +4,30 @@
 		<meta charset="UTF-8">
 		<title>开源</title>
 		
-		<link rel="stylesheet" href="../plugins/mdui/css/mdui.min.css" />
+		<meta name="keywords" content="极客屋,极客,geek,geekhome,开源,博客,问与答,专题,标签"/>
+		<meta name="description" content="极客屋是极客们的社区。在这里大家能够多多分享自己正在做的有趣事物、最近的学习、交流想法，在这里找到朋友认识更多有趣的人。"/>
+		<meta name="robots" content="all" />
+		
+		<link rel="stylesheet" href="../plugins/mdui/css/mdui.min.css">
 		<link rel="stylesheet" href="../plugins/layui/css/layui.css">
+		<link rel="stylesheet" href="../plugins/Hui-iconfont/1.0.8/iconfont.css"  />
 		<link rel="stylesheet" href="../css/common.css" />
 		<link rel="stylesheet" href="../css/openSourcePage.css" />
 		
 	</head>
-	<body>
-		<div class="mdui-container" style="padding: 0px; height: 2100px;">
+	<body id="opensource">
 			<div class="mdui-card small_card">
-	  			<div class="crad_title">开源</div>
-	  			<div class="mdui-tab" mdui-tab>
-	  				<a href="#java" class="mdui-ripple">JAVA</a>
-				 	<a href="#technology" class="mdui-ripple">Python</a>
-				  	<a href="#node" class="mdui-ripple">JS</a>
-				  	<a href="#node" class="mdui-ripple">C#</a>
-				  	<a href="#node" class="mdui-ripple">Ruby</a>
-				  	<a href="#node" class="mdui-ripple">GO</a>
-				  	<a href="#node" class="mdui-ripple">PHP</a>
-				  	<a href="#node" class="mdui-ripple">更多</a>
-				</div>
-				<div id="java" class="mdui-m-t-1">
+	  			<div class="crad_title">『开源』</div>
+	  			<div class="mdui-tab mdui-tab-full-width"></div>
+				<div id="tab_content" class="mdui-m-t-1"></div>
+				
+				<!--<div id="java" class="mdui-m-t-1">
+					
 					<div class="crad_title">本类推荐</div>
 					<div class="mdui-row-xs-4 mdui-m-t-1">
 					  	<div class="mdui-col">
 							<div class="mdui-grid-tile">
-							  	<a href="javascript:;"><img src="../img/test.jpg"/></a>
+							  	<a href="javascript:;"><img src="http://fakeimg.pl/350x225/?text=geekHome&font=lobster" /></a>
 							  	<div class="mdui-grid-tile-actions">
 								    <div class="mdui-grid-tile-text">
 								      	<div class="mdui-grid-tile-title">定时任务调度系统 OpenCron</div>
@@ -39,7 +37,7 @@
 					  	</div>
 					  	<div class="mdui-col">
 					  		<div class="mdui-grid-tile">
-							  	<a href="javascript:;"><img src="../img/test.jpg"/></a>
+							  	<a href="javascript:;"><img src="http://fakeimg.pl/350x225/?text=geekHome&font=lobster" /></a>
 							  	<div class="mdui-grid-tile-actions">
 								    <div class="mdui-grid-tile-text">
 								      	<div class="mdui-grid-tile-title">微信开发 Java SDK Weixin Java Tools </div>
@@ -49,7 +47,7 @@
 					  	</div>
 					  	<div class="mdui-col">
 					  		<div class="mdui-grid-tile">
-							  	<a href="javascript:;"><img src="../img/test.jpg"/></a>
+							  	<a href="javascript:;"><img src="http://fakeimg.pl/350x225/?text=geekHome&font=lobster" /></a>
 							  	<div class="mdui-grid-tile-actions">
 								    <div class="mdui-grid-tile-text">
 								      	<div class="mdui-grid-tile-title">JFinal 快速开发平台 EOVA </div>
@@ -59,7 +57,7 @@
 					  	</div>
 					  	<div class="mdui-col">
 					  		<div class="mdui-grid-tile">
-							  	<a href="javascript:;"><img src="../img/test.jpg"/></a>
+							  	<a href="javascript:;"><img src="http://fakeimg.pl/350x225/?text=geekHome&font=lobster" /></a>
 							  	<div class="mdui-grid-tile-actions">
 								    <div class="mdui-grid-tile-text">
 								      	<div class="mdui-grid-tile-title">JAVA 极速WEB+ORM框架 JFinal</div>
@@ -68,91 +66,203 @@
 							</div>
 					  	</div>
 					</div>	
-					<div class="mdui-divider mdui-m-t-1"></div>
+					<div class="line mdui-m-t-1"></div>
+					
 					<ul class="mdui-list">
-					  	<li class="mdui-list-item mdui-ripple">
+					  	<li class="mdui-list-item mdui-ripple" onclick="open_sources_config.openSourceDetail()">
 					  		<div class="mdui-list-item-content">
       							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
       							<div class="mdui-list-item-text mdui-list-item-one-line">
       								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
       							</div>
       							<img src="../img/tt.png" width="50%" height="50%"/>
-	      						<div class="mdui-card-actions">
-							    	<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe417;</i></a><span style="font-size: 12px;">56</span>
-							    	<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe87e;</i></a><span style="font-size: 12px;">89</span>
-							    	<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe253;</i></a><span style="font-size: 12px;">33</span>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
 							  	</div>
     						</div>
 					  	</li>
-					  	<div class="mdui-divider mdui-m-t-1"></div>
+					  	<div class="line"></div>
 						<li class="mdui-list-item mdui-ripple">
 							<div class="mdui-list-item-content">
       							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
       							<div class="mdui-list-item-text mdui-list-item-one-line">
       								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
       							</div>
-	      						<div class="mdui-card-actions">
-							    	<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe417;</i></a><span style="font-size: 12px;">56</span>
-							    	<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe87e;</i></a><span style="font-size: 12px;">89</span>
-							    	<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe253;</i></a><span style="font-size: 12px;">33</span>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
 							  	</div>
     						</div>
 						</li>
-						<div class="mdui-divider mdui-m-t-1"></div>
+						<div class="line"></div>
 						<li class="mdui-list-item mdui-ripple">
 							<div class="mdui-list-item-content">
       							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
       							<div class="mdui-list-item-text mdui-list-item-one-line">
       								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
       							</div>
-	      						<div class="mdui-card-actions">
-							    	<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe417;</i></a><span style="font-size: 12px;">56</span>
-							    	<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe87e;</i></a><span style="font-size: 12px;">89</span>
-							    	<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe253;</i></a><span style="font-size: 12px;">33</span>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
 							  	</div>
     						</div>
 						</li>
-						<div class="mdui-divider mdui-m-t-1"></div>
+						<div class="line"></div>
+						<li class="mdui-list-item mdui-ripple">
+							<div class="mdui-list-item-content">
+      							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
+      							<div class="mdui-list-item-text mdui-list-item-one-line">
+      								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
+      							</div>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
+							  	</div>
+    						</div>
+						</li>
+						<div class="line"></div>
+						<li class="mdui-list-item mdui-ripple">
+							<div class="mdui-list-item-content">
+      							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
+      							<div class="mdui-list-item-text mdui-list-item-one-line">
+      								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
+      							</div>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
+							  	</div>
+    						</div>
+						</li>
+						<div class="line"></div>
+						<li class="mdui-list-item mdui-ripple">
+							<div class="mdui-list-item-content">
+      							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
+      							<div class="mdui-list-item-text mdui-list-item-one-line">
+      								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
+      							</div>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
+							  	</div>
+    						</div>
+						</li>
+						<div class="line"></div>
+						<li class="mdui-list-item mdui-ripple">
+							<div class="mdui-list-item-content">
+      							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
+      							<div class="mdui-list-item-text mdui-list-item-one-line">
+      								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
+      							</div>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
+							  	</div>
+    						</div>
+						</li>
+						<div class="line"></div>
+						<li class="mdui-list-item mdui-ripple">
+							<div class="mdui-list-item-content">
+      							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
+      							<div class="mdui-list-item-text mdui-list-item-one-line">
+      								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
+      							</div>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
+							  	</div>
+    						</div>
+						</li>
+						<div class="line"></div>
+						<li class="mdui-list-item mdui-ripple">
+							<div class="mdui-list-item-content">
+      							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
+      							<div class="mdui-list-item-text mdui-list-item-one-line">
+      								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
+      							</div>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
+							  	</div>
+    						</div>
+						</li>
+						<div class="line"></div>
+						<li class="mdui-list-item mdui-ripple">
+							<div class="mdui-list-item-content">
+      							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
+      							<div class="mdui-list-item-text mdui-list-item-one-line">
+      								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
+      							</div>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
+							  	</div>
+    						</div>
+						</li>
+						<div class="line"></div>
+						<li class="mdui-list-item mdui-ripple">
+							<div class="mdui-list-item-content">
+      							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
+      							<div class="mdui-list-item-text mdui-list-item-one-line">
+      								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
+      							</div>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
+							  	</div>
+    						</div>
+						</li>
+						<div class="line"></div>
+						<li class="mdui-list-item mdui-ripple">
+							<div class="mdui-list-item-content">
+      							<div class="mdui-list-item-title">基于 Java 的轻量级 CMS 解决方案 天梯</div>
+      							<div class="mdui-list-item-text mdui-list-item-one-line">
+      								天梯（tianti） Java 轻量级的 CMS 解决方案-天梯。天梯是一个用 Java 相关技术搭建的后台 CMS 解决方案，用户可以结合自身业务进行相应扩展，同时提供了针对 dao、serv...
+      							</div>
+	      						<div class="mdui-card-actions mdui-m-t-1">
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe725;</i><span style="font-size: 12px;color: grey;">56</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe69e;</i><span style="font-size: 12px;color: grey;">89</span>&nbsp;&nbsp;&nbsp;
+							    	<i class="Hui-iconfont" style="color: #3F3F3F;font-size: 25px;">&#xe622;</i><span style="font-size: 12px;color: grey;">33</span>
+							  	</div>
+    						</div>
+						</li>
+						<div class="line"></div>
 					</ul>
-				</div>
+				</div>-->
 				
-				<div id="technology" class="mdui-m-t-1">
-					<ul class="mdui-list">
-					  	<li class="mdui-list-item mdui-ripple">Inbox</li>
-						<li class="mdui-list-item mdui-ripple">Starred</li>
-						<li class="mdui-list-item mdui-ripple">Send mail</li>
-					</ul>
-				</div>
 				<div class="mdui-valign">
 				  	<div id="paging" class="mdui-center"></div>
 				</div>
 	  		</div>		
-		</div>
 	</body>
 	
 	<script type="text/javascript" src="../js/jquery.min.js" ></script>
-	<script type="text/javascript" src="../plugins/mdui/js/mdui.min.js" ></script>
+	<script type="text/javascript" src="../plugins/mdui/js/mdui.min.js"></script>
 	<script type="text/javascript" src="../plugins/layui/layui.js"></script>
+	<script type="text/javascript" src="../js/commonConfig.js" ></script>
+	<script type="text/javascript" src="../js/openSourcesConfig.js" ></script>
 	
 	<script type="application/javascript">
 		
-		$(function(){
-			layui.use(['laypage', 'layer'], function(){
-	  			var laypage = layui.laypage;
-	  			layer = layui.layer;
-	  			
-			  	laypage({
-			    	cont: 'paging'
-			    	,pages: 100 //得到总页数
-			    	,jump: function(obj){
-	//		    		self.attachList(obj.curr-1,false);
-						console.log(obj);
-			    	}
-			  	});
-	  
-			});
-		});
+		var open_sources_config;
 		
+		$(function(){
+			open_sources_config = new openSourcesConfig();
+//			var m_Iframe = $(window.parent.document).find("#m_Iframe");
+//			m_Iframe.height($(document).height());
+//			console.log($("#opensource").height());
+		});
 		
 	</script>
 

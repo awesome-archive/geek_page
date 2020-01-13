@@ -2,51 +2,87 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>geek home</title>
+		<title>极客屋</title>
 		
-	<link rel="stylesheet" href="plugins/mdui/css/mdui.min.css" />
+	<meta name="keywords" content="极客屋,极客,geek,geekhome,开源,博客,问与答,专题,标签"/>
+	<meta name="description" content="极客屋是极客们的社区。在这里大家能够多多分享自己正在做的有趣事物、最近的学习、交流想法，在这里找到朋友认识更多有趣的人。"/>
+	<meta name="robots" content="all" />
+
+	<link rel="stylesheet" href="plugins/mdui/css/mdui.min.css">
 	<link rel="stylesheet" href="css/index.css" />
 	<link rel="stylesheet" href="plugins/flickerplate/css/flickerplate.css"/>
-	<link rel="stylesheet" href="plugins/sliderVerification/css/drag.css"/>
+	<link rel="stylesheet" href="plugins/Hui-iconfont/1.0.8/iconfont.css"  />
 	<link rel="icon" href="img/logo.png" type="image/x-icon">
+	
+	
+	<style>
+		 #captcha{
+            width: 100%;
+            display: inline-block;
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+       #wait {
+            text-align: left;
+            color: #666;
+            margin: 0;
+        }
+	</style>
 	
 	</head>
 	
 	<body class="mdui-appbar-with-toolbar">
 		<!--head menu-->
 		<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
-		  	<div class="mdui-toolbar mdui-color-white">
-			    <a href="javascript:;"><img src="img/logo.png" width="50" height="50" id="logo"/></a>
-			   	<a href="javascript:;" class="mdui-typo-headline" style="font-size: 30px;">极客屋</a>
+		  	<div class="mdui-toolbar mdui-color-white" id="head_user_info">
+			    <a href="javascript:;" class="logoBtn"><img src="img/logo.png" width="50" height="50" id="logo"/></a>
+			   	<a href="javascript:;" class="logoBtn" class="mdui-typo-headline" style="font-size: 30px;">极客屋</a>
 			   	<a href="javascript:;" class="mdui-typo-title menu_title" id="indexPage">首页</a>
 			   	<a href="javascript:;" class="mdui-typo-title menu_title" id="openSourcePage">开源</a>
-			   	<a href="javascript:;" class="mdui-typo-title menu_title">博客</a>
+			   	<a href="javascript:;" class="mdui-typo-title menu_title" id="blogPage">博客</a>
 			   	<a href="javascript:;" class="mdui-typo-title menu_title" id="questionsAnswersPage">问与答</a>
+			   	<!--<a href="javascript:;" class="mdui-typo-title menu_title" id="specialPage">专题</a>-->
 			   	<a href="javascript:;" class="mdui-typo-title menu_title" id="lableNodePage">标签节点</a>
-			   	<input type="hidden" id="userId" />
 			    <div class="mdui-toolbar-spacer"></div>
 			    <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">
 					<button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe8b6;</i></button>
 					<input class="mdui-textfield-input" type="text" placeholder="   请输入你要搜索的内容..."/>
 					<button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5cd;</i></button>
 				</div>
-
-				<a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#loginDialog'}"><i class="mdui-icon material-icons">&#xe853;</i></a>
-				<a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">&#xe5d4;</i></a>
-
+				
+			   	<input type="hidden" id="userId" />
+				<input type="hidden" id="userName" />
+				<input type="hidden" id="headImgUrl" />
+				<input type="hidden" id="sex" />	
+				<input type="hidden" id="email" />
+				<input type="hidden" id="brief" />
+				<input type="hidden" id="birthday" />
+				<input type="hidden" id="phone" />
+				<input type="hidden" id="createTime" />
+				
+				<a href="javascript:;" class="mdui-btn mdui-btn-icon headImg">
+					<i class="mdui-icon material-icons">&#xe853;</i>
+				</a>
+				
+				<a href="javascript:;" style="display: none;" class="mdui-btn mdui-btn-icon user_more" mdui-menu="{target: '#demo-attr-cascade'}"><i class="mdui-icon material-icons">&#xe5d4;</i></a>
 				<ul class="mdui-menu" id="demo-attr-cascade" style="margin-top: 60px;">
-  					<li class="mdui-menu-item">
-				    	<a href="javascript:;" class="mdui-ripple">
-				      		<i class="mdui-menu-item-icon mdui-icon material-icons">&#xe417;</i>个人设置
-				    	</a>
-				  	</li>
-				  	<li class="mdui-divider"></li>
-				  	<li class="mdui-menu-item">
-				    	<a href="login.html" class="mdui-ripple">
-				    		<i class="mdui-menu-item-icon mdui-icon material-icons">&#xe6dd;</i>退出登录
-				    	</a>
-				  	</li>
+	  				<li class="mdui-menu-item">
+					    <a href="javascript:;" class="mdui-ripple" id="settingBtn">
+					      	<i class="mdui-menu-item-icon mdui-icon material-icons">&#xe417;</i>个人主页
+					    </a>
+					</li>
+					<li class="mdui-divider"></li>
+					<li class="mdui-menu-item">
+					   	<a href="javascript:void(0);" class="mdui-ripple" id="logout">
+					    	<i class="mdui-menu-item-icon mdui-icon material-icons">&#xe6dd;</i>退出登录
+					    </a>
+					</li>
 				</ul>
+				
 		  	</div>
 		</div>
 		
@@ -59,7 +95,7 @@
 					  		<span class="mdui-center"><b style="font-size: 25px;">极客屋</b><img src="img/logo.png" width="50" height="50" /></span>
 				  		</div>
 				  		<div class="mdui-valign mdui-m-t-2">
-					  		<span class="mdui-center" style="font-size: 16px;color: gray;"><i style="color: gainsboro;">—————————</i>&nbsp;&nbsp;使用第三方帐号登录&nbsp;&nbsp;<i style="color: gainsboro;">—————————</i></span><br />
+					  		<span class="mdui-center" style="font-size: 16px;color: gray;"><i style="color:ghostwhite;">—————————</i>&nbsp;&nbsp;使用第三方帐号登录&nbsp;&nbsp;<i style="color: ghostwhite;">—————————</i></span><br />
 				  		</div>
 				  		<div class="mdui-valign mdui-m-t-1">
 					  		<a href="#" title="微博帐号登录" rel="nofollow" class="weibo mdui-center"></a>
@@ -67,20 +103,20 @@
 					  		<a href="#" title="微信帐号登录" rel="nofollow" class="wechat mdui-center"></a>
 				  		</div>
 				  		<div class="mdui-valign mdui-m-t-1">
-					  		<span class="mdui-center" style="font-size: 16px;color: gray;"><i style="color: gainsboro;">—————————</i>&nbsp;&nbsp;使用邮箱登录&nbsp;&nbsp;<i style="color: gainsboro;">—————————</i></span><br />
+					  		<span class="mdui-center" style="font-size: 16px;color: gray;"><i style="color: ghostwhite;">—————————</i>&nbsp;&nbsp;使用注册账户登陆&nbsp;&nbsp;<i style="color: ghostwhite;">—————————</i></span><br />
 				  		</div>
 					  	<div class="mdui-textfield">
 							<i class="mdui-icon material-icons">account_circle</i>
-							<input class="mdui-textfield-input" type="email" placeholder="请输入邮箱账号..."/>
+							<input class="mdui-textfield-input name" type="text" placeholder="请输入用户名..."/>
 						</div>
 						<div class="mdui-textfield">
 							<i class="mdui-icon material-icons">lock</i>
-							<input class="mdui-textfield-input" type="email" placeholder="密码..."/>
+							<input class="mdui-textfield-input pwd" type="password" placeholder="请输入密码..."/>
 						</div>
-						<button class="mdui-m-t-1 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-red">登录</button>
+						<button class="mdui-m-t-1 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-red userLogin">登录</button>
 						<div class="mdui-m-t-3 login_register">
 							<span class="mdui-float-left"><a href="#" id="forgetPsw">忘记密码>></a></span>
-							<span class="mdui-float-right" onclick="document.querySelector('#loginDialog').classList.toggle('hover');">还没有极客屋账号？<a href="javascript:void(0);" id="register">点击注册>></a></span>
+							<span class="mdui-float-right">还没有极客屋账号？<a href="javascript:void(0);" id="register">点击注册>></a></span>
 						</div>
 				  	</div>
 				</div>
@@ -90,47 +126,96 @@
 						<div class="mdui-valign">
 				  			<span class="mdui-center"><b style="font-size: 25px;">极客屋</b><img src="img/logo.png" width="50" height="50" /></span>
 			  			</div>
-			  			<div class="mdui-textfield">
-							<i class="mdui-icon material-icons">&#xeb41;</i>
-							<input class="mdui-textfield-input" type="email" placeholder="请输入用户名..."/>
+						<div class="mdui-textfield">
+						  	<i class="mdui-icon material-icons">account_circle</i>
+						  	<input class="mdui-textfield-input userName" type="text" placeholder="请输入用户名..."/>
 						</div>
-			  			<div class="mdui-textfield">
-							<i class="mdui-icon material-icons">account_circle</i>
-							<input class="mdui-textfield-input" type="email" placeholder="请输入邮箱账号..."/>
+						<div class="mdui-textfield">
+						  	<i class="mdui-icon material-icons">email</i>
+						  	<input class="mdui-textfield-input email" type="email" placeholder="请输入邮箱..."/>
 						</div>
 						<div class="mdui-textfield">
 							<i class="mdui-icon material-icons">lock</i>
-							<input class="mdui-textfield-input" type="email" placeholder="密码..."/>
+						  	<input class="mdui-textfield-input password" type="password" placeholder="请输入密码..."/>
 						</div>
-						<div id="drag"></div>
-						<button class="mdui-m-t-1 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-red">登录</button>
-						<button class="mdui-m-t-1 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-blue" onclick="document.querySelector('#loginDialog').classList.toggle('hover');">返回登陆</button>
+						<div class="mdui-textfield">
+							<div id="captcha">
+					            <p id="wait" class="show">正在加载验证码......</p>
+					        </div>
+						</div>
+						<button class="mdui-m-t-3 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-red registerBtn">注册</button>
+						<button class="mdui-m-t-1 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-blue returnLogin" onclick="document.querySelector('#loginDialog').classList.toggle('hover');">返回登陆</button>
 					</div>
 				</div>
 			</div>
 			
 		</div>
 		
-		<div class="mdui-container" style="height: 2120px;margin-top: 10px;padding: 0px;">
-			<iframe id="m_Iframe" frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+		<div class="mdui-dialog flip-container" id="accountAndEmail" style="width: 500px;">
+			<div class="flipper">
+				 <div class="mdui-dialog-content" id= "modifyP" style="width: 500px;">
+			  		<div class="mdui-valign">
+				  		<span class="mdui-center"><b style="font-size: 25px;">极客屋</b><img src="img/logo.png" width="50" height="60" /></span>
+			  		</div>
+				  	<div class="mdui-textfield" >
+						<i class="mdui-icon material-icons">account_circle</i>
+						<input class="mdui-textfield-input signName" type="text" placeholder="请输入用户名..."/>
+					</div>
+					<div class="mdui-textfield">
+						<i class="mdui-icon material-icons">email</i>
+						<input  class="mdui-textfield-input signEmail" type="email" placeholder="请输入注册邮箱...">
+					</div>
+					<button class="mdui-m-t-1 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-red sentCodeToEmail">下一步</button>
+					<button class="mdui-m-t-1 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-blue nextReturn">返回登录</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mdui-dialog flip-container" id="verifyEmailCode" style="width: 500px;">
+			<div class="flipper">
+				 <div class="mdui-dialog-content" id= "modifyP" style="width: 500px;">
+			  		<div class="mdui-valign">
+				  		<span class="mdui-center"><b style="font-size: 25px;">极客屋</b><img src="img/logo.png" width="50" height="60" /></span>
+			  		</div>
+				  	<div class="mdui-textfield" >
+						<i class="mdui-icon material-icons">vpn_key</i>
+						<input class="mdui-textfield-input emailCode" type="text" placeholder="请输入6位数验证码..."/>
+					</div>
+					<div class="mdui-textfield">
+						<i class="mdui-icon material-icons">lock</i>
+						<input  class="mdui-textfield-input emailPassword" type="password" placeholder="请输入新密码...">
+					</div>
+					<div class="mdui-textfield">
+						<i class="mdui-icon material-icons">lock</i>
+						<input  class="mdui-textfield-input againEmailPassword" type="password" placeholder="请再次输入新密码...">
+					</div>
+					<button class="mdui-m-t-1 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-red upStep">上一步</button>
+					<button class="mdui-m-t-1 mdui-btn mdui-btn-raised mdui-ripple mdui-btn-block mdui-color-blue codeNextStep">下一步</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mdui-container" style="margin-top: 10px;padding: 0px;">
+			<iframe id="m_Iframe" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="width: 100%;"></iframe>
   		</div>
+  		
   		<div id="footer" class="mdui-color-white">
   			<div class="mdui-container" style="padding: 0px;">
 	  			<div style="float: left;">
 	  				<ul>
-		  				<li><a href="#">关于</a></li>
-		  				<li><a href="#">我们的愿景</a></li>
+		  				<li><a href="javaScript:void(0);" id="aboutMeBtn">关于</a></li>
+		  				<li><a href="javaScript:void(0);" id="missionBtn">我们的愿景</a></li>
 		  				<li><a href="#">广告投放</a></li>
 		  				<li><a href="#">鸣谢</a></li>
 		  				<li><b class="mdui-text-color-light-blue-a100">2721</b> <a href="#">人在线</a></li>
 		  				<li><a href="#">最高记录</a> <b class="mdui-text-color-light-blue-a100">50000</b></li>
 	  				</ul>
 	  				<br/>
-		  			<p style="margin-top: 30px;color: gray;">创意工作者们的社区</p>
+		  			<p style="margin-top: 30px;color: gray;"><i class="Hui-iconfont">&#xe6d1;</i>创意工作者们的社区</p>
 					<p style="color:gray;">World is powered by solitude</p>
 					<p style="margin-top: 30px;color: gray;">VERSION: 0.0.0.1 · 17ms · UTC 01:50 · PVG 09:50 · LAX 18:50 · JFK 21:50</p>
 					<p style="color: gray;">♥ Do have faith in what you're doing.</p>
-					<p style="margin-top: 30px;color:#4C4C4C;">沪ICP备xxxxxxx号-1</p>
+					<a href="http://www.miitbeian.gov.cn/" style="margin-top: 30px;color:#4C4C4C;text-decoration:none;font-size: 15px;">皖ICP备17027335号</a>
 	  			</div>
 	  			<div style="float: right;">
 	  				<img src="img/logo.png" width="200" height="200"/>
@@ -139,34 +224,34 @@
   		</div>
 		
 		<!--弹出菜单-->
-		<!--<div class="mdui-fab-wrapper" id="fab">
+		<div class="mdui-fab-wrapper" id="fab">
 		    <button class="mdui-fab mdui-ripple mdui-color-pink-accent">
 		      	<i class="mdui-icon material-icons">&#xe145</i>
 		      	<i class="mdui-icon mdui-fab-opened material-icons">&#xe254</i>
 		    </button>
     		<div class="mdui-fab-dial">
-      			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink"><i class="mdui-icon material-icons">&#xe864</i></button>
-      			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" id="addArticle"><i class="mdui-icon material-icons">&#xe0e0</i></button>
-      			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange" id="addRemind"><i class="mdui-icon material-icons">&#xe191</i></button>
-      			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue"><i class="mdui-icon material-icons">&#xe913</i></button>
+      			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink" id="add_open_source_btn"><i class="Hui-iconfont">&#xe6d1;</i></button>
+      			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" id="add_blog_btn"><i class="mdui-icon material-icons">&#xe0e0</i></button>
+      			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" id="questions_answers_btn"><i class="Hui-iconfont">&#xe6c5;</i></button>
     		</div>
-  		</div>-->
+  		</div>
   		
 	</body>
 	
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
-	<script type="text/javascript" src="plugins/mdui/js/mdui.min.js" ></script>
-	<script type="text/javascript" src="plugins/sliderVerification/js/drag.js"></script>
+	<script type="text/javascript" src="plugins/mdui/js/mdui.min.js"></script>
+	<script type="text/javascript" src="plugins/layer/2.4/layer.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+	<script type="text/javascript" src="js/gt.js" ></script>
+	<script type="text/javascript" src="js/commonConfig.js" ></script>
 	<script type="text/javascript" src="js/indexConfig.js" ></script>
 	
 	<script type="application/javascript">
 		
-		$('#drag').drag();
-		
 		$(function(){
 			new indexConfig();
 		});
-		
+
 	</script>
 	
 </html>

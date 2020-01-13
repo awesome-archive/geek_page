@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>博客</title>
+		
+		<meta name="keywords" content="极客屋,极客,geek,geekhome,开源,博客,问与答,专题,标签"/>
+		<meta name="description" content="极客屋是极客们的社区。在这里大家能够多多分享自己正在做的有趣事物、最近的学习、交流想法，在这里找到朋友认识更多有趣的人。"/>
+		<meta name="robots" content="all" />
+		
+		<link rel="stylesheet" href="../plugins/mdui/css/mdui.min.css">
+		<link rel="stylesheet" href="../plugins/layui/css/layui.css">
+		<link rel="stylesheet" href="../plugins/Hui-iconfont/1.0.8/iconfont.css"  />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/blogPage.css" />
+		
+	</head>
+	<body id="blogPage">
+		<div class="mdui-card small_card">
+	  		<div class="q_a_title">『博客』</div>
+	  			<div class="mdui-row">
+		  			<div class="mdui-col-xs-12 mdui-col-sm-9" style="border-right: 1px solid ghostwhite;">
+						<ul class="mdui-list mdui-list-dense" id="blogList">
+							
+						</ul>
+						
+						<div class="mdui-valign">
+							<div id="paging" class="mdui-center"></div>
+						</div>
+		  			</div>
+  					<div class="mdui-col-xs-6 mdui-col-sm-3">
+  						<div class="mdui-card small_card">
+  							<div class="q_a_title">博文分类</div>
+  							<div class="mdui-row" id="blogType"></div>
+  						</div>
+  						
+  						<div class="mdui-card small_card mdui-m-t-1" style="padding-bottom: 5px;">
+  							<div class="q_a_title">热门博主</div>
+  							<div class="mdui-row" id="hotBlogUser"></div>
+  						</div>
+  						
+  						<div class="mdui-card small_card mdui-m-t-1" style="padding-bottom: 5px;">
+  							<div class="q_a_title">blog热文排行</div>
+  							<ul class="mdui-list" id="hotBlog"></ul>
+  						</div>
+  						
+  						<div class="mdui-card small_card mdui-m-t-1" style="height: 600px;">
+  							<div class="q_a_title">推荐专栏</div>
+  							
+  						</div>
+  						
+  						<div class="mdui-card small_card mdui-m-t-1" style="height: 800px;">
+  							<div class="q_a_title">图书推荐</div>
+  							
+  						</div>
+  					</div>
+				</div>
+	  	</div>		
+	</body>
+	
+	<script type="text/javascript" src="../js/jquery.min.js" ></script>
+	<script type="text/javascript" src="../plugins/mdui/js/mdui.min.js"></script>
+	<script type="text/javascript" src="../plugins/layui/layui.js"></script>
+	<script type="text/javascript" src="../js/jquery.timeago.js" ></script>
+	<script type="text/javascript" src="../js/commonConfig.js" ></script>
+	<script type="text/javascript" src="../js/blogConfig.js" ></script>
+	
+	<script type="application/javascript">
+		
+		var blog_config;
+		
+		$(function(){
+			blog_config = new blogConfig();
+		});
+		
+	</script>
+
+</html>
